@@ -2,7 +2,7 @@
 
 A modern, fully responsive website built with **HTML5** and **CSS3**, showcasing extreme sports and outdoor adventure gear with a sleek **glassmorphism UI**.  
 
-![Banner](EnduraX/Assets/hero_img.png)  
+![Banner](EnduraX/Hero_preview.png)  
 
 ---
 
@@ -24,16 +24,6 @@ A modern, fully responsive website built with **HTML5** and **CSS3**, showcasing
 - 🏂 **Adventure Categories** – Surfing, Biking, Climbing, Snowboarding & more  
 - 📰 **Newsletter Section** with frosted-glass input & button  
 - 📌 **Minimal & Clean Footer** with company info, links, and social icons  
-
----
-
-## 📸 Screenshots  
-
-### 🏔️ Hero Section  
-![Hero](Assets/hero_img.png)  
-
-### 📩 Newsletter Section  
-![Newsletter](Assets/footer_banner.png)  
 
 ---
 
