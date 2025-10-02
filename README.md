@@ -1,6 +1,6 @@
 # 🌍 EnduraX – Extreme Sports & Adventure Gear Website  
 
-A modern, fully responsive website built with **HTML5** and **CSS3**, showcasing extreme sports and outdoor adventure gear with a sleek **glassmorphism UI**.  
+A modern, responsive website built with **HTML5** and **CSS3**, showcasing extreme sports and outdoor adventure gear with a sleek **glassmorphism UI**.  
 
 ![Banner](EnduraX/Hero_preview.png)  
 
