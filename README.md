@@ -1,9 +1,3 @@
-Perfect 🚀 Thanks for sharing your project link!
-I’ll create a **professional but attractive README** with sections like banner, live demo, features, tech stack, screenshots, setup instructions, and contribution guidelines.
-You can copy-paste this into your GitHub repo’s `README.md`.
-
----
-
 # EnduraX 🌍🏔️
 
 *A modern, responsive website for showcasing extreme sports and outdoor adventure gear.*
