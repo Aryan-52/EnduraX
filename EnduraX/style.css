@@ -1,0 +1,407 @@
+/* General CSS */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f5f5f5;
+  color: #111;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #ffffffcc; /* semi-transparent white */
+  padding: 10px 40px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  backdrop-filter: blur(4px);
+  position: sticky; /* sticks navbar on scroll */
+  top: 0;
+  z-index: 1000;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #111;
+}
+
+.logo a {
+  text-decoration: none;
+  color: #111;
+}
+
+
+nav a {
+  margin: 0 15px;
+  text-decoration: none;
+  font-weight: 500;
+  color: #222;
+  transition: color 0.3s ease;
+}
+
+nav a:hover {
+  color: #4f565e; /* hover color */
+}
+
+.nav-icons {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.nav-icons a {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  font-size: 0.9rem;
+  color: #222;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.nav-icons a:hover {
+  color: #4f565e;
+}
+
+.nav-icons img {
+  width: 20px;  /* consistent size */
+  height: 20px;
+  margin-right: 8px;
+  object-fit: contain;
+}
+
+/* Hero Section */
+.hero {
+  position: relative;
+  height: 100vh; /* full screen */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: url('Assets/hero_img.png') center center / cover no-repeat;
+  background-attachment: fixed; /* keeps image sharp and crisp */
+  color: white;
+  text-align: center;
+}
+
+/* Overlay for readability */
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.35); /* subtle dark overlay */
+  z-index: 1;
+}
+
+.hero-overlay {
+  position: relative;
+  z-index: 2;
+  max-width: 800px;
+  padding: 20px;
+}
+
+.hero h1 {
+  font-size: 3.5rem;
+  margin-bottom: 20px;
+  line-height: 1.2;
+}
+
+.hero p {
+  font-size: 1.3rem;
+  margin-bottom: 30px;
+  font-weight: 300;
+  color: #f5f5f5;
+  line-height: 1.5;
+}
+
+/* Button (themed frosted glass) */
+.hero button {
+  padding: 14px 40px;
+  background: rgba(255, 255, 255, 0.15); 
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  border-radius: 30px;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  font-weight: bold;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.hero button:hover {
+  background: rgba(255, 255, 255, 0.3);
+  transform: translateY(-3px);
+}
+
+
+/* New Arrivals Section */
+.new-arrivals {
+  padding: 50px 20px;
+  text-align: center;
+}
+
+.products {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+/* Product Card */
+.product-card {
+  background: #fff;
+  padding: 15px;
+  border-radius: 10px;
+  width: 240px; /* fixed size so they don't shrink */
+  cursor: pointer;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease;
+}
+
+.product-card:hover {
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Product Images */
+.product-card img {
+  width: 100%;
+  height: 220px; /* fixed height for uniformity */
+  object-fit: contain; /* no cropping */
+  border-radius: 8px;
+}
+
+/* Promo Section */
+.promo {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 4rem 8%;
+  gap: 2rem;
+}
+
+.promo-content {
+  flex: 1;
+  max-width: 500px;
+}
+
+.promo-content h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.promo-content p {
+  margin-bottom: 1rem;
+  line-height: 1.6;
+  color: #444;
+}
+
+.promo-content button {
+  padding: 0.8rem 1.5rem;
+  background: #111;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.promo-content button:hover {
+  background: #0967a5;
+}
+
+.promo-image {
+  flex: 1;
+}
+
+.promo-image img {
+  width: 600px;
+  height: 400px;
+  border-radius: 12px;
+  object-fit: cover;
+}
+
+
+/* Featured Collections */
+.collections {
+  padding: 50px 20px;
+  text-align: center;
+}
+
+.collection-grid {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.collection {
+  background: #fff;
+  padding: 15px;
+  border-radius: 10px;
+  width: 240px;
+  cursor: pointer;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease;
+}
+
+.collection:hover {
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.collection img {
+  width: 100%;
+  height: 280px; /* uniform size */
+  object-fit: cover; /* fills card neatly */
+  border-radius: 8px;
+}
+
+
+/* Footer */
+.footer {
+  background: #111;
+  color: #fff;
+  margin-top: 40px;
+}
+
+/* Newsletter Section */
+.footer_top {
+  background: url("Assets/footer_banner.png") no-repeat center/cover;
+  text-align: center;
+  padding: 100px 20px;
+  color: white;
+  position: relative;
+}
+
+.footer_top h2,
+.footer_top p {
+  position: relative;
+  z-index: 2;
+}
+
+.footer_top::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5); /* overlay for readability */
+  z-index: 1;
+}
+
+.newsletter {
+  margin-top: 20px;
+  position: relative;
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.newsletter input {
+  padding: 12px 15px;
+  border: none;
+  border-radius: 10px;
+  width: 250px;
+
+  /* frosted glass */
+  background: rgba(255, 255, 255, 0.2);
+  color: #fff;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+.newsletter input::placeholder {
+  color: #eee;
+}
+
+.newsletter button {
+  padding: 12px 20px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+
+  /* glass effect */
+  background: rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  color: #fff;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.newsletter button:hover {
+  background: rgba(255, 255, 255, 0.4);
+  transform: scale(1.05);
+}
+
+/* Links Section */
+.footer_links {
+  display: flex;
+  justify-content: space-between; /* better spacing */
+  flex-wrap: wrap;
+  padding: 50px 8%;
+  border-top: 1px solid #333;
+  border-bottom: 1px solid #333;
+}
+
+.footer_col {
+  flex: 1;
+  min-width: 200px;
+  margin: 15px;
+}
+
+.footer_col h2 {
+  font-size: 1.8rem; /* make EnduraX stand out */
+  margin-bottom: 10px;
+}
+
+.footer_col p {
+  font-size: 13px;    /* smaller tagline */
+  font-weight: 300;   /* lighter */
+  color: #aaa;        /* subtle so title stays dominant */
+  margin-top: -5px;
+}
+
+.footer_col h4 {
+  margin-bottom: 5px;
+  font-size: 1rem;
+}
+
+.footer_col ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer_col ul li {
+  margin-bottom: 10px;
+}
+
+.footer_col ul li a {
+  text-decoration: none;
+  color: #ccc;
+  transition: color 0.3s;
+}
+
+.footer_col ul li a:hover {
+  color: #fff;
+}
+
+/* Bottom Bar */
+.footer_bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 15px 8%;
+  background: #0a0a0a;
+  font-size: 0.9rem;
+}
+
+.footer_bottom_right {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+
+

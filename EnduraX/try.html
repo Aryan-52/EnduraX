@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EnduraX - Outdoor Gear</title>
+  <style>
+    /* General CSS */
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f5f5f5;
+      color: #111;
+    }
+
+    /* Navbar */
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: #fff;
+      padding: 15px 30px;
+    }
+
+    .navbar a {
+      margin: 0 10px;
+      text-decoration: none;
+      color: #111;
+    }
+
+    /* Hero Section */
+    .hero {
+      text-align: center;
+      padding: 120px 20px; /* more breathing room */
+      background: url('Assets/hero_img.png') center/cover no-repeat; /* ensures no stretch */
+      color: white;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .hero h1 {
+      font-size: 3rem; /* cleaner look */
+      margin-bottom: 10px;
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      margin-bottom: 20px;
+    }
+
+    .hero button {
+      padding: 12px 32px;
+      background: white;
+      color: #111;
+      border: none;
+      cursor: pointer;
+      border-radius: 25px;
+      box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15);
+      font-weight: bold;
+    }
+
+    /* New Arrivals Section */
+    .new-arrivals {
+      padding: 50px 20px;
+      text-align: center;
+    }
+
+    .products {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    /* Product Card */
+    .product-card {
+      background: #fff;
+      padding: 15px;
+      border-radius: 10px;
+      width: 240px; /* fixed size so they don't shrink */
+      cursor: pointer;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+      transition: box-shadow 0.3s ease;
+    }
+
+    .product-card:hover {
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    /* Product Images */
+    .product-card img {
+      width: 100%;
+      height: 220px; /* fixed height for uniformity */
+      object-fit: contain; /* no cropping */
+      border-radius: 8px;
+    }
+
+    /* Promo Section */
+    .promo {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 4rem 8%;
+      gap: 2rem;
+    }
+
+    .promo-content {
+      flex: 1;
+      max-width: 500px;
+    }
+
+    .promo-content h2 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+
+    .promo-content p {
+      margin-bottom: 1rem;
+      line-height: 1.6;
+      color: #444;
+    }
+
+    .promo-content button {
+      padding: 0.8rem 1.5rem;
+      background: #111;
+      color: #fff;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    .promo-content button:hover {
+      background: #0967a5;
+    }
+
+    .promo-image {
+      flex: 1;
+    }
+
+    .promo-image img {
+      width: 600px;
+      height: 400px;
+      border-radius: 12px;
+      object-fit: cover;
+    }
+
+
+    /* Featured Collections */
+    .collections {
+      padding: 50px 20px;
+      text-align: center;
+    }
+
+    .collection-grid {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .collection {
+      background: #fff;
+      padding: 15px;
+      border-radius: 10px;
+      width: 240px;
+      cursor: pointer;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+      transition: box-shadow 0.3s ease;
+    }
+
+    .collection:hover {
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    .collection img {
+      width: 100%;
+      height: 280px; /* uniform size */
+      object-fit: cover; /* fills card neatly */
+      border-radius: 8px;
+    }
+
+
+    /* Footer */
+    footer {
+      background: #111;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
+    }
+    footer a {
+      color: #fff;
+      text-decoration: none;
+      margin: 0 10px;
+    }
+    footer a:hover {
+      text-decoration: underline;
+    }
+    footer p {
+      margin: 10px 0 0;
+    }
+    footer .social-icons {
+      margin-top: 10px;
+    }
+    footer .social-icons a {
+      margin: 0 10px;
+      font-size: 1.2rem;
+    }
+    footer .social-icons a:hover {
+      color: #ddd;
+    }
+
+  </style>
+</head>
+<body>
+  <!-- Navbar -->
+  <header class="navbar">
+    <div class="logo"><b>EnduraX</b></div>
+    <nav>
+      <a href="">New Arrivals</a>
+      <a href="">Collection</a>
+      <a href="">About</a>
+      <a href="">Blog</a>
+      <a href="">Find Store</a>
+    </nav>
+    <div class="nav-icons">
+      <a href="">Search</a>
+      <a href="">Cart</a>
+      <a href="">Login</a>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <!-- Added overlay div for readability -->
+    <div class="hero-overlay">
+      <h1>EnduraX Outdoor Gear</h1>
+      <p>Built for Performance & Adventure</p>
+      <button>Shop Now</button>
+    </div>
+  </section>
+
+  <!-- New Arrivals -->
+  <section class="new-arrivals">
+    <h2>New Arrivals</h2>
+    <p>Our new arrivals are built to withstand your activities while keeping you looking best!</p>
+    <div class="products">
+      <!-- Product Card Example -->
+      <div class="product-card">
+        <div class="product-image">
+          <img src="Assets/DSPTCH_Carabiner.png" alt="Product 1">
+        </div>
+        <div class="product-info">
+          <h3>DSPTCH Carabiner</h3>
+          <p>$39.00</p>
+        </div>
+      </div>
+
+        <div class="product-card">
+            <div class="product-image">
+            <img src="Assets/running_vest.png" alt="Product 1">
+            </div>
+            <div class="product-info">
+            <h3>Y3 Running Vest</h3>
+            <p>$129.00</p>
+            </div>
+        </div>
+
+        <div class="product-card">
+            <div class="product-image">
+            <img src="Assets/trail_sunglasses.png" alt="Product 1">
+            </div>
+            <div class="product-info">
+            <h3>Trail Sunglasses</h3>
+            <p>$54.00</p>
+            </div>
+        </div>
+
+        <div class="product-card">
+            <div class="product-image">
+            <img src="Assets/yanben_thermos.png" alt="Product 1">
+            </div>
+            <div class="product-info">
+            <h3>YanBen Thermos</h3>
+            <p>$79.00</p>
+            </div>
+        </div>
+
+        <div class="product-card">
+            <div class="product-image">
+            <img src="Assets/camping_chair.png" alt="Product 1">
+            </div>
+            <div class="product-info">
+            <h3>YanBen Thermos</h3>
+            <p>$79.00</p>
+            </div>
+        </div>
+
+        <div class="product-card">
+            <div class="product-image">
+            <img src="Assets/sling_bag.png" alt="Product 1">
+            </div>
+            <div class="product-info">
+            <h3>YanBen Thermos</h3>
+            <p>$79.00</p>
+            </div>
+        </div>
+
+        <div class="product-card">
+            <div class="product-image">
+            <img src="Assets/outdoor_bag.png" alt="Product 1">
+            </div>
+            <div class="product-info">
+            <h3>YanBen Thermos</h3>
+            <p>$79.00</p>
+            </div>
+        </div>
+
+        <div class="product-card">
+            <div class="product-image">
+            <img src="Assets/black_mask.png" alt="Product 1">
+            </div>
+            <div class="product-info">
+            <h3>YanBen Thermos</h3>
+            <p>$79.00</p>
+            </div>
+        </div>
+    </div>
+  </section>
+
+  <!-- Promo Banner -->
+<section class="promo">
+  <div class="promo-content">
+    <h2>Winter Collection</h2>
+    <p>Gear up for the coldest adventures with EnduraX. From insulated jackets to thermal accessories, 
+       our winter essentials are built to keep you warm, light, and unstoppable.</p>
+    <p><b>Exclusive Launch Offer:</b> Flat 30%–50% off on selected items.</p>
+    <button>Shop Winter Gear</button>
+  </div>
+  <div class="promo-image">
+    <img src="Assets/winter_collection.png" alt="Winter Gear">
+  </div>
+</section>
+
+
+  <!-- Featured Collections -->
+  <section class="collections">
+    <h2>Featured Collections</h2>
+    <div class="collection-grid">
+      <div class="collection">
+        <img src="Assets/footwear.png" alt="Footwear Collection">
+        <h3>Footwear</h3>
+      </div>
+      <div class="collection">
+        <img src="Assets/bags.png" alt="Bags Collection">
+        <h3>Bags</h3>
+      </div>
+      <div class="collection">
+        <img src="Assets/jackets.png" alt="Jackets Collection">
+        <h3>Jackets</h3>
+      </div>
+      <div class="collection">
+        <img src="Assets/accessories.png" alt="Accessories Collection">
+        <h3>Accessories</h3>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="footer-section about">
+        <h3>About EnduraX</h3>
+        <p>EnduraX is dedicated to providing high-quality outdoor gear that combines performance, durability, and style. Whether you're hitting the trails or exploring the urban jungle, we've got you covered.</p>
+      </div>
+      <div class="footer-section links">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="#">New Arrivals</a></li>
+          <li><a href="#">Collections</a></li>
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">Blog</a></li>
+          <li><a href="#">Find a Store</a></li>
+        </ul>
+      </div>
+      <div class="footer-section contact">
+        <h3>Contact Us</h3>
+        <p>Email:
+</body>
+</html>
+
+        <p>EnduraX is dedicated to providing high-quality outdoor gear that combines performance, durability, and style. Whether you're hitting the trails or exploring the urban jungle, we've got you covered.</p>
